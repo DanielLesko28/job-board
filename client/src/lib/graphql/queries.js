@@ -31,6 +31,7 @@ export async function getJob(id) {
         company {
           id
           name
+          description
         }
       }
     }
@@ -47,6 +48,11 @@ export async function getCompany(companyId) {
         id
         name
         description
+        jobs {
+          id
+          date
+          title
+        }
       }
     }
   `;
