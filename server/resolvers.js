@@ -25,7 +25,7 @@ export const resolvers = {
     date: (job) => toIsoDate(job.createdAt),
   },
   Company: {
-    jobs: (company) => getJobsByCompany(company.idf),
+    jobs: (company) => getJobsByCompany(company.id),
   },
 };
 
