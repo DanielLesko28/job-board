@@ -5,8 +5,10 @@ export const resolvers = {
     jobs: () => getJobs(),
   },
   Job: {
-    date: (job) => {
-      return job.createdAt;
-    },
+    date: (job) => toIsoDate(job.createdAt),
   },
 };
+
+function toIsoDate(value) {
+  return value.slice(0, "yyyy-mm-dd".length);
+}
